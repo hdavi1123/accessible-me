@@ -1,6 +1,9 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: white;
+  /* i judt made the background a little lighter so it is easier to read */
+  color: black;
+  /* i also made the text darker */
   margin: 0;
   padding: 0;
 }
@@ -22,6 +25,9 @@ h6 {
 
 img {
   width: 100%;
+  height: auto;
+  display: block;
+  /* i added auto heigt so that the image would scale to the container width that is set */
 }
 
 .main-nav ul {
@@ -30,6 +36,8 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  background-color: black;
+  /* i added a background colour for the nav so it stands out more */
 }
 
 .main-nav ul li {
@@ -39,33 +47,88 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: white;
+  /* i made the next lighter so you can see it against the background */
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 1rem;
+  /* i also added some padding to make it look cleaner */
 }
+
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0%;
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  display: block;
+
+}
+
+.skip-link:focus{
+  top: 0;
+  position: relative;
+  outline: 3px solid yellow;
+  /* added outline */
+
+}
+
 
 form input,
 form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid gray;
+  font-size: 1rem;
+  /* just added a border to it and changed font size */
 }
 
 form textarea {
-  min-height: 150px;
-  max-height: 150px;
+  /* got rid of min and max height */
+  /* min-height: 150px; */
+  /* max-height: 150px; */
   height: 150px;
   resize: none;
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border: none;
   padding: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
 }
+/* made the form button styled to be more interactive */
+
+form button:hover, form-button:focus{
+  background-color: gray;
+  outline: 3px solid yellow;
+}
+/* added colour chnage for when you hover over the form button */
+
+
+/* this is for the pacing of the sections */
+#products,#studio,#reservations{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+
 
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  /* just made the footer center and changed the background and font colour */
 }
